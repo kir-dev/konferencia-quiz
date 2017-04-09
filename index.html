@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>Kir-Dev</title>
+    <meta charset="UTF-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/css/uikit.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/js/uikit.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.2/js/components/accordion.min.js"  crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1 class="uk-heading-large uk-align-center" align="center">Kir-Dev Quiz</h1>
+    <div id="content-container">
+      <div id="content-main" class="uk-width-large-3-5 uk-container-center">
+
+        <div class="uk-grid uk-top-margin">
+          <div class="uk-width-1-2">
+            <span>
+              <canvas id="myCanvas" width="330px" height="200px"></canvas>
+            </span>
+            <span>
+              <textarea id="codeArea" placeholder="Code here.."></textarea>
+            </span>
+
+            <button class="uk-button" type="button" id="clear">Töröl</button>
+            <button class="uk-button" type="button" id="draw">Rajzolj!</button>
+          </div>
+
+          <div class="uk-width-1-2">
+            <div class="uk-accordion" data-uk-accordion>
+
+              <h3 class="uk-accordion-title">Feladat</h3>
+              <div class="uk-accordion-content">
+                Írj egy javascript kódot, mely a HTML5 canvas-re kirajzol egy piros négyzetet!
+              </div>
+
+              <h3 class="uk-accordion-title">Help</h3>
+              <div class="uk-accordion-content">
+                Az alábbi kulcsszavakat érdemes használni:
+                <code>document</code>,
+                <code>getElementById()</code>,
+                <code>getContext('2d')</code>,
+                <code>moveTo(x,y)</code>,
+                <code>lineTo(x,y)</code>,
+                <code>stroke()</code>,
+                <code>rect(x,y,w,h)</code>,
+                <code>fillStyle</code>,
+                <code>fill()</code>
+              </div>
+
+              <h3 class="uk-accordion-title">More help</h3>
+              <div class="uk-accordion-content">
+                Itt egy zöld kört rajzoló kód:
+                  <code>var canvas = document.getElementById('myCanvas');</code>
+                  <code>var context = canvas.getContext('2d');</code>
+                  <code>context.beginPath();</code>
+                  <code>context.arc(95,50,40,0,2*Math.PI);</code>
+                  <code>context.fillStyle= "#3ef25f";</code>
+                  <code>context.fill();</code>
+              </div>
+
+              <h3 class="uk-accordion-title">Much more help</h3>
+              <div class="uk-accordion-content">
+                Itt egy téglalapot rajzoló kód:
+                <code>var canvas = document.getElementById('myCanvas');</code>
+                <code>var context = canvas.getContext('2d');</code>
+                <code>context.beginPath();</code>
+                <code>context.rect(50,50,100,50);</code>
+                <code>context.stroke();</code>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!--Footer content-->
+  <footer id="footer">
+    <div class="tm-footer">
+      <div class="uk-container uk-container-center uk-text-center">
+        <ul class="uk-subnav uk-subnav-line uk-flex-center">
+          <li><a href="https://twitter.com/KirDev">Twitter</a></li>
+          <li><a href="https://github.com/kir-dev">Github</a></li>
+          <li><a href="http://simonyi.bme.hu">Simonyi</a></li>
+        </ul>
+        <div class="uk-panel">
+          <p>Made by <a href="http://kir-dev.sch.bme.hu">Kir-Dev</a>.</br>
+          <img src="kirdev_bw.png" id="drawKirdev" width="50" height="50" title="Kir-Dev" alt="Kir-Dev">
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>
